@@ -4,7 +4,6 @@
 }
 
 html{
-    /* background: #F5F5F5; */
     color: #212121;
 
     background-image: url("../img/background.png");
@@ -14,21 +13,18 @@ html{
 
 .page{
     width: 740px;
-    /* height: 94vh; */
     
     margin: 20px auto;
     padding: 80px 20px;
 
     display: grid;
     grid-gap: 10px;
-    /* grid-template: repeat(7, auto) / repeat(3, 1fr);  */
     grid-template-columns: repeat(2, 3fr) 2fr;
     grid-template-rows: repeat(7, auto);
 
     margin: 20px auto;
     padding: 4px 20px;
 
-    /* border: 1px solid #795548; */
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 1px 1px 4px 2px #79554846;
 
@@ -44,14 +40,22 @@ html{
 }
 
 .photo{
+    position: relative;
+    top: 0;
     width: 200px;
     height: 200px;
     margin-top: 12px;
 
     background-image: url("../img/photo_mono.jpg");
     background-size: cover;
-    box-shadow: 4px 4px 4px #2121214d;
+    box-shadow: 0 0 1px #2121214d;
+    transition: box-shadow 0.5s, top 0.5s;
 }
+.photo:hover{
+    box-shadow: 4px 8px 4px #2121214d;
+    top: -5px;
+}
+
 .photo img{
     height: 100%;
 
@@ -91,7 +95,7 @@ p{
     margin-bottom:  8px;
 }
 
-a:not(.photo a){
+p a{
     padding: 0 2px;
     text-decoration: none;
     color: white;
@@ -99,6 +103,6 @@ a:not(.photo a){
     /* background-color: #616161; */
     transition: background-color 0.5s;
 }
-a:not(.photo a):hover{
+p a:hover{
     background-color: #E64A19;
 }
