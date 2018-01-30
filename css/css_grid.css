@@ -46,6 +46,7 @@ html{
 .photo{
     width: 200px;
     height: 200px;
+    margin-top: 12px;
 
     background-image: url("../img/photo_mono.jpg");
     background-size: cover;
@@ -90,7 +91,7 @@ p{
     margin-bottom:  8px;
 }
 
-a{
+a:not(.photo a){
     padding: 0 2px;
     text-decoration: none;
     color: white;
@@ -98,6 +99,6 @@ a{
     /* background-color: #616161; */
     transition: background-color 0.5s;
 }
-a:hover{
+a:not(.photo a):hover{
     background-color: #E64A19;
 }
